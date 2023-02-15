@@ -1,0 +1,270 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a::selection,
+button::selection,
+p::selection {
+  color: mediumpurple;
+}
+
+body {
+  font-family: "Ubuntu", Arial;
+  transition: all 0.5s ease;
+}
+
+body,
+html {
+  overflow-x: hidden;
+}
+
+button {
+  font-family: "Ubuntu", Arial;
+}
+
+header nav .nav-bar, header nav .nav-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  position: absolute;
+}
+header nav .nav-bar img:first-child, header nav .nav-content img:first-child {
+  z-index: 100;
+}
+header nav .nav-bar img:last-child, header nav .nav-content img:last-child {
+  z-index: 999;
+  margin-left: 9rem;
+}
+header nav .nav-content {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #fff;
+  padding-block: 2.3rem;
+  position: absolute;
+  top: 6rem;
+  margin-left: 2rem;
+  width: 82vw;
+  z-index: 9;
+  animation: slide 1.2s linear 0s;
+}
+@keyframes slide {
+  from {
+    right: -20rem;
+  }
+  to {
+    right: 0rem;
+  }
+}
+header nav .nav-content a {
+  text-decoration: none;
+  color: hsl(210, 4%, 67%);
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+header nav .nav-content a:hover {
+  color: hsl(167, 40%, 24%);
+}
+header nav .nav-content a:nth-child(2) {
+  margin-block: 1.5rem;
+}
+header nav .nav-content button {
+  background-color: hsl(51, 100%, 49%);
+  color: #000;
+  border-radius: 2rem;
+  outline: none;
+  border: none;
+  font-weight: bold;
+  padding: 1rem 1.7rem;
+}
+header nav .nav-content button:hover {
+  background-color: #b3e0f2;
+  color: #fff;
+}
+header nav .nav-content button:last-child {
+  margin-top: 1.5rem;
+}
+header .aside-nav {
+  text-align: center;
+  position: relative;
+}
+header .aside-nav p {
+  color: #fff;
+  font-weight: bold;
+  font-size: 3rem;
+  text-align: center;
+  letter-spacing: 7px;
+  position: absolute;
+  z-index: 0;
+  top: 8rem;
+}
+header .aside-nav img:first-child {
+  width: 100vw;
+  position: relative;
+}
+header .aside-nav img:last-child {
+  width: 10vw;
+  height: 20vh;
+  position: relative;
+  top: -5rem;
+  margin-top: -40rem;
+  animation: jump 0.8s ease 1s infinite;
+}
+@keyframes jump {
+  from {
+    top: -8rem;
+  }
+  to {
+    top: -5rem;
+  }
+}
+
+.section-one, .section-two {
+  text-align: center;
+  margin-top: -1rem;
+}
+.section-one div:first-child img, .section-two div:first-child img {
+  width: 100vw;
+  margin-top: -0.5rem;
+}
+.section-one div:last-child, .section-two div:last-child {
+  padding: 3rem 1.5rem 2rem 1.5rem;
+}
+.section-one div:last-child p:first-child, .section-two div:last-child p:first-child {
+  font-weight: bold;
+  font-size: 2.2rem;
+  color: hsl(212, 27%, 19%);
+}
+.section-one div:last-child p:nth-child(2), .section-two div:last-child p:nth-child(2) {
+  font-size: 1rem;
+  margin-block: 2rem;
+  line-height: 2;
+  color: hsl(210, 4%, 67%);
+}
+.section-one div:last-child p:nth-child(3), .section-two div:last-child p:nth-child(3) {
+  font-weight: bold;
+  color: hsl(212, 27%, 19%);
+}
+.section-one div:last-child hr, .section-two div:last-child hr {
+  width: 28vw;
+  outline: none;
+  border-radius: 10px;
+  border: 1.25vw solid hsl(51, 100%, 49%);
+  margin-left: 29.56vw;
+}
+
+.section-two {
+  margin-block: 1rem;
+}
+.section-two div:last-child hr {
+  border-color: hsl(7, 99%, 70%);
+}
+
+.section-three, .section-four {
+  position: relative;
+}
+.section-three div:last-child, .section-four div:last-child {
+  position: absolute;
+  top: 23.5rem;
+  color: hsl(167, 40%, 24%);
+  text-align: center;
+  padding: 0 1.2rem 0 1.2rem;
+}
+.section-three div:last-child p:first-child, .section-four div:last-child p:first-child {
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.section-three div:last-child p:last-child, .section-four div:last-child p:last-child {
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+.section-four {
+  margin-top: -0.5rem;
+}
+.section-four div:last-child p {
+  color: hsl(198, 62%, 26%);
+}
+
+.section-five {
+  padding: 3.7rem 1.3rem;
+}
+.section-five p:first-child {
+  font-weight: bold;
+  font-size: 1rem;
+  letter-spacing: 5px;
+  color: #B4C4C0;
+  text-align: center;
+  margin-bottom: 3.2rem;
+}
+.section-five .testimonial-one, .section-five div:last-child, .section-five div:nth-child(3) {
+  text-align: center;
+}
+.section-five .testimonial-one img, .section-five div:last-child img, .section-five div:nth-child(3) img {
+  border-radius: 50%;
+  width: 20vw;
+  height: 20vw;
+}
+.section-five .testimonial-one p:nth-child(2), .section-five div:last-child p:nth-child(2), .section-five div:nth-child(3) p:nth-child(2) {
+  line-height: 1.5;
+  margin-block: 1.8rem;
+  color: hsl(232, 10%, 55%);
+}
+.section-five .testimonial-one p:nth-child(3), .section-five div:last-child p:nth-child(3), .section-five div:nth-child(3) p:nth-child(3) {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: hsl(212, 27%, 19%);
+}
+.section-five .testimonial-one p:last-child, .section-five div:last-child p:last-child, .section-five div:nth-child(3) p:last-child {
+  font-size: 0.8rem;
+  color: #B4C4C0;
+}
+.section-five div:nth-child(3) {
+  margin-block: 3rem;
+}
+.section-six div:last-child, .section-six div:first-child {
+  display: flex;
+}
+.section-six div:last-child img:first-child, .section-six div:first-child img:first-child {
+  width: 50vw;
+}
+.section-six div:last-child img:last-child, .section-six div:first-child img:last-child {
+  width: 50vw;
+}
+
+footer div:last-child, footer div:nth-child(2) {
+  display: flex;
+  align-items: center;
+}
+
+footer {
+  text-align: center;
+  padding: 3rem 2.5rem 3.5rem;
+  background-color: hsl(168, 34%, 61%);
+  height: 45vh;
+}
+footer .footer-image:first-child {
+  width: 50vw;
+}
+footer div:nth-child(2) {
+  margin: 3rem 0 5rem 0;
+  justify-content: space-between;
+}
+footer div:nth-child(2) a {
+  color: hsl(167, 40%, 24%);
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+}
+footer div:nth-child(2) a:hover {
+  color: #fff;
+}
+footer div:last-child {
+  justify-content: space-evenly;
+}
+
+/*# sourceMappingURL=style.css.map */

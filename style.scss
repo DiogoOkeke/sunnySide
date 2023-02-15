@@ -1,0 +1,346 @@
+@import "variable";
+@import "global";
+
+
+
+header{
+ nav{
+    
+  .nav-bar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    position: absolute;
+    
+    
+    img:first-child{
+      z-index: 100;
+    }
+    
+    img:last-child{
+      z-index: 999;
+      margin-left: 9rem;
+    }
+    
+   }
+  
+  
+  .nav-content{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    background-color: $white;
+    padding-block: 2.3rem;
+    position: absolute;
+    top: 6rem;
+    margin-left: 2rem;
+    width: 82vw;
+    z-index: 9;
+    animation: slide 1.2s linear 0s;
+    @extend .nav-bar;
+ 
+    
+    @keyframes slide{
+     from{
+       right: -20rem;
+    }
+ 
+      to{
+       right: 0rem;
+     }
+   }
+    
+    a{
+      text-decoration: none;
+      color: $grayishBlue;
+      font-weight: bold;
+      font-size: 1.1rem;
+      
+      &:hover{
+        color: $green;
+      }
+    }
+    
+    a:nth-child(2){
+      margin-block: 1.5rem;
+    }
+    
+
+    
+    button{
+      background-color: $yellow;
+      color: $black;
+      border-radius: 2rem;
+      outline: none;
+      border: none;
+      font-weight: bold;
+      padding: 1rem 1.7rem;  
+      
+      &:hover{
+        background-color: lighten($color: $blue, $amount: 10%);
+        color: $white;
+      }
+    }
+    
+    button:last-child{
+      margin-top: 1.5rem;
+    }
+  }
+ }
+ 
+ .aside-nav{
+   text-align: center;
+   position: relative;
+   
+   p{
+     color: $white;
+     font-weight: bold;
+     font-size: 3rem;
+     text-align: center;
+     letter-spacing: 7px;
+     position: absolute;
+     z-index: 0;
+     top: 8rem;
+   }
+   
+   img:first-child{
+     width: 100vw;
+     position: relative;
+   }
+   
+   img:last-child{
+     width: 10vw;
+     height: 20vh;
+     position: relative;
+     top: -5rem;
+     margin-top: -40rem;
+     animation: jump .8s ease 1s infinite;
+   }
+   
+   @keyframes jump{
+     from{
+       top: -8rem;
+     }
+     
+     to{
+       top: -5rem;
+     }
+   }
+   
+   
+ }
+}
+
+
+.section-one{
+  text-align: center;
+  margin-top: -1rem;
+  div:first-child{
+    img{
+      width: 100vw;
+      margin-top: -.5rem;
+    }
+  }
+  
+  div:last-child{
+    padding: 3rem 1.5rem 2rem 1.5rem;
+    
+    p:first-child{
+      font-weight: bold;
+      font-size: 2.2rem;
+      color: $veryDarkDesaturatedBlue;
+    }
+    
+    p:nth-child(2){
+      font-size: 1rem;
+      margin-block: 2rem;
+      line-height: 2;
+      color: $grayishBlue;
+    }
+    
+    p:nth-child(3){
+      font-weight: bold;
+      color: $veryDarkDesaturatedBlue;
+    }
+    
+    hr{
+      width: 28vw;
+      outline: none;
+      border-radius: 10px;
+      border: 1.25vw solid $yellow;
+      margin-left: 29.56vw;
+    }
+    
+  }
+  
+}
+
+
+.section-two{
+  margin-block: 1rem;
+  div:last-child{
+  hr{
+    border-color: $red;
+    @extend hr;
+  }
+}
+  @extend .section-one;
+}
+
+
+.section-three{
+  position: relative;
+  
+  div:last-child{
+    position: absolute;
+    top: 23.5rem;
+    color: $green;
+    text-align: center;
+    padding: 0 1.2rem 0 1.2rem;
+    
+    p:first-child{
+      margin-bottom: 2rem;
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+    
+    p:last-child{
+      font-size: .9rem;
+      line-height: 1.8;
+    }
+    
+  }
+ 
+}
+
+
+.section-four{
+  margin-top: -.5rem;
+  
+  div:last-child{
+    p{
+      color: $photographyBlue;
+    }
+  }
+  @extend .section-three;
+}
+
+
+.section-five{
+  padding: 3.7rem 1.3rem;
+  
+  p:first-child{
+    font-weight: bold;
+    font-size: 1rem;
+    letter-spacing: 5px;
+    color: $grey;
+    text-align: center;
+    margin-bottom: 3.2rem;
+  }
+  
+  .testimonial-one{
+    text-align: center;
+    
+    img{
+      border-radius: 50%;
+      width: 20vw;
+      height: 20vw;
+    }
+    
+    p:nth-child(2){
+      line-height: 1.5;
+      margin-block: 1.8rem;
+      color: $darkGrayishBlue;
+    }
+    
+    p:nth-child(3){
+      font-weight: bold;
+      margin-bottom: .5rem;
+      color: $veryDarkDesaturatedBlue;
+    }
+    
+    p:last-child{
+      font-size: .8rem;
+      color: $grey;
+    }
+  }
+  
+  
+  div:nth-child(3){
+    margin-block: 3rem;
+    @extend .testimonial-one;
+  } 
+  
+  div:last-child{
+    @extend .testimonial-one;
+  }
+  
+}
+
+
+%flex{
+  display: flex;
+  
+  img:first-child{
+      width: 50vw;
+    }
+    
+    img:last-child{
+      width: 50vw;
+    }
+    
+}
+
+
+.section-six{
+  
+  div:first-child{
+    @extend %flex;
+  }
+  
+  div:last-child{
+    @extend %flex;
+  }
+  
+}
+
+
+%flexRow{
+  display: flex;
+  align-items: center;
+}
+
+footer{
+  text-align: center;
+  padding: 3rem 2.5rem 3.5rem;
+  background-color: hsl(168, 34%, 61%);
+  height: 45vh;
+  
+  .footer-image:first-child{
+    width: 50vw;
+  }
+  
+  div:nth-child(2){
+    margin: 3rem 0 5rem 0;
+    justify-content: space-between;
+    @extend %flexRow;
+    
+    a{
+      color: $green;
+      font-weight: bold;
+      font-size: 1rem;
+      text-decoration: none;
+      
+      &:hover{
+        color: $white;
+      }
+    }
+  }
+  
+  div:last-child{
+    @extend %flexRow;
+    justify-content: space-evenly;
+  }
+  
+}
